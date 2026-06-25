@@ -43,7 +43,7 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 ###  使用方法
 
 1. **下载快捷指令**  
-   - 方式一：点击 [iCloud 分享链接](https://www.icloud.com/shortcuts/...) 直接下载（请替换为实际链接）。  
+   - 方式一：点击 [iCloud 分享链接]([https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f]) 直接下载。  
    - 方式二：将本仓库中的 3 个 `.shortcut` 文件下载到手机，保存到“文件” App，然后在文件中点击每个文件，导入到快捷指令 App。
 
 2. **配置 API Key**  
@@ -96,7 +96,7 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 ###  How to Use
 
 1. **Download the shortcuts**  
-   - Option A: Use the [iCloud sharing link](https://www.icloud.com/shortcuts/...) (replace with actual link).  
+   - Option A: Use the [iCloud sharing link](https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f) .  
    - Option B: Download the 3 `.shortcut` files from this repo to your phone, save them to the Files app, then tap each file to import into Shortcuts.
 
 2. **Configure API Key**  
