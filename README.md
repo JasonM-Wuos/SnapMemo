@@ -43,7 +43,7 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 ###  使用方法
 
 1. **下载快捷指令**  
-   - 方式一：点击 [iCloud 分享链接](https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f) 直接下载。  
+   - 方式一：点击 [iCloud 分享链接-1](https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f)、[iCloud分享链接-2](https://www.icloud.com/shortcuts/3c47936568e7492496815a2c25049e95) 、[iCloud分享链接-3](https://www.icloud.com/shortcuts/cfdb9afac76f48628e5c138753abcff5)分别下载三个快捷指令。  
    - 方式二：将本仓库中的 3 个 `.shortcut` 文件下载到手机，保存到“文件” App，然后在文件中点击每个文件，导入到快捷指令 App。
 
 2. **配置 API Key**  
@@ -56,8 +56,8 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
    - 如需更改，请打开“建立日程”快捷指令，按提示修改日历名称；在主快捷指令中可修改备忘录文件夹名称。
 
 4. **唤起使用**  
-   - 将主快捷指令设置为侧边栏按钮或快速操作（Quick Actions）。  
-   - 长按侧边栏按钮即可启动，或在任意界面通过“分享”菜单中的快捷指令运行。
+   - 将主快捷指令设置为侧边栏按钮(进入设置app-点击“操作按钮”设置-左右翻动找到“快捷指令”-选择“SnapMemo_zh”)。  
+   - 长按侧边栏按钮即可启动。
 
 ###  后续计划
 
@@ -96,7 +96,7 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 ###  How to Use
 
 1. **Download the shortcuts**  
-   - Option A: Use the [iCloud sharing link](https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f) .  
+   - Option A: Use the [iCloud sharing link 1](https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f) [iCloud sharing link 2](https://www.icloud.com/shortcuts/3c47936568e7492496815a2c25049e95) [iCloud sharing link 3](https://www.icloud.com/shortcuts/cfdb9afac76f48628e5c138753abcff5) to download 3 short cuts.  
    - Option B: Download the 3 `.shortcut` files from this repo to your phone, save them to the Files app, then tap each file to import into Shortcuts.
 
 2. **Configure API Key**  
@@ -109,14 +109,15 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
    - To change, open the “Create Event” shortcut and follow the prompts to alter the calendar name; modify the memo folder name in the main shortcut.
 
 4. **Launch**  
-   - Assign the main shortcut to the side button or Quick Actions.  
-   - Long‑press the side button to run it, or invoke it from the share sheet of any screen.
+   - Assign the main shortcut to the side button.  
+   - Long‑press the side button to run it.
 
 ###  Roadmap
 
 - **Better time parsing**: Currently does not understand relative expressions like “next Tuesday”. We plan to add current‑time retrieval and calculation (workaround: if the screenshot is from WeChat, tapping the message time reveals the full date, which the model can use).
 - **Multi‑turn interaction**: Although tool calls are supported, multi‑turn dialogues with the user are not. We will expose “choice” and “fill‑in‑the‑blank” as tools for the agent to enable interactive completion.
 - **More features**: Add “reminder”, “recurring event detection”, and “set reminders before event start”.
+- **Multiple language**: Currently system prompt is written in Chinese. An English version would be launched later. Or you can use any LLM to translate it yourself and substitute the current one.
 
 ---
 
