@@ -27,7 +27,7 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 ###  优势
 
 - **成本极低**：本场景无需顶尖大模型，使用 DeepSeek 等平价 API，单次调用成本远低于 Notion AI 等方案。
-- **高度可定制**：相较于Todoo等现成软件，您可以自由修改快捷指令中的提示词、模型、默认日历/文件夹，甚至扩展新的输出类型。
+- **高度可定制**：相较于Todoo等现成软件，您可以自由修改快捷指令中的提示词、模型、默认日历/文件夹，甚至通过自制副快捷指令扩展新的输出类型。
 
 ###  不足
 
@@ -43,8 +43,8 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 ###  使用方法
 
 1. **下载快捷指令**  
-   - 方式一：点击 [iCloud 分享链接-1](https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f)、[iCloud分享链接-2](https://www.icloud.com/shortcuts/3c47936568e7492496815a2c25049e95) 、[iCloud分享链接-3](https://www.icloud.com/shortcuts/cfdb9afac76f48628e5c138753abcff5)分别下载三个快捷指令。  
-   - 方式二：将本仓库中的 3 个 `.shortcut` 文件下载到手机，保存到“文件” App，然后在文件中点击每个文件，导入到快捷指令 App。
+   - 方式一：点击 [iCloud 分享链接-1](https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f)、[iCloud分享链接-2](https://www.icloud.com/shortcuts/3c47936568e7492496815a2c25049e95) 、[iCloud分享链接-3](https://www.icloud.com/shortcuts/cfdb9afac76f48628e5c138753abcff5)分别下载4个快捷指令。  
+   - 方式二：将本仓库中的 4 个 `.shortcut` 文件下载到手机，保存到“文件” App，然后在文件中点击每个文件，导入到快捷指令 App。
 
 2. **配置 API Key**  
    - 打开主快捷指令，找到 `API Key` 对应的文本输入框，粘贴您在 DeepSeek 平台获取的 Key。  
@@ -58,6 +58,10 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 4. **唤起使用**  
    - 将主快捷指令设置为侧边栏按钮(进入设置app-点击“操作按钮”设置-左右翻动找到“快捷指令”-选择“SnapMemo_zh”)。  
    - 长按侧边栏按钮即可启动。
+
+5. **错误处理**
+   - 当调用大模型API的过程出现异常时，快捷指令会自动保存错误信息与出错前的用户请求内容（保存位置自选），以便排查问题。
+   - 如要获取更多调试信息，可以设置DebugMode=True，快捷指令会保存过程中的请求、模型的完整回复与思维链、具体的工具调用过程等，以便排查问题。
 
 ###  后续计划
 
