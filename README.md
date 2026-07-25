@@ -8,10 +8,6 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 > 截屏 → 自动识别活动/任务 → 一键生成日历日程或备忘录  
 > 基于 DeepSeek API，低成本、高可控，全部在 iOS 快捷指令（iOS Shortcut）中运行。
 
-## Language
-- [中文版](#ChineseVer)
-- [English Version](#EnglishVer)
-
 ---
 
 ##  <a id="ChineseVer"></a>
@@ -43,11 +39,11 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 ###  使用方法
 
 1. **下载快捷指令**  
-   - 方式一：点击 [iCloud 分享链接-1](https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f)、[iCloud分享链接-2](https://www.icloud.com/shortcuts/3c47936568e7492496815a2c25049e95) 、[iCloud分享链接-3](https://www.icloud.com/shortcuts/cfdb9afac76f48628e5c138753abcff5)分别下载4个快捷指令。  
+   - 方式一：点击 [iCloud 分享链接-主快捷指令](https://www.icloud.com/shortcuts/aba28e7a92184d13b9a6084543f3ba18)、[iCloud分享链接-备忘录](https://www.icloud.com/shortcuts/f9076021ffb4405f9b8903b75fabec07) 、[iCloud分享链接-日历](https://www.icloud.com/shortcuts/4a8c4ce373854bd98f95b64e2ac2f4ee)、[iCloud分享链接-列表多选](https://www.icloud.com/shortcuts/1803e9d03af749ac8e5606b1681f29da)分别下载4个快捷指令。  
    - 方式二：将本仓库中的 4 个 `.shortcut` 文件下载到手机，保存到“文件” App，然后在文件中点击每个文件，导入到快捷指令 App。
 
 2. **配置 API Key**  
-   - 打开主快捷指令，找到 `API Key` 对应的文本输入框，粘贴您在 DeepSeek 平台获取的 Key。  
+   - 打开主快捷指令(Snapmemo-zh)，找到 `API Key` 对应的文本输入框，粘贴您在 DeepSeek 平台获取的 Key。  
    - 默认模型为 `deepseek-v4-flash`（价格低廉），如需更换模型或供应商，请同时修改 `model` 和 `url` 参数。  
    - 注意：本快捷指令**不依赖**多模态能力，纯文本识别即可。
 
@@ -69,63 +65,4 @@ Deepseek-api-based iOS Shortcut for taking screenshots and create memo or calend
 - **多轮交互**：虽然已支持工具调用，但不支持与用户的多轮对话。后续将把“选择题”和“填空题”以工具（Tools）形式暴露给智能体，实现交互式补全。
 - **更多功能**：增加“添加提醒事项”、“识别重复日程”、“日程开始前设置提醒”等能力。
 
----
-
-##  <a id="EnglishVer"></a>
-
-###  CoreFeatures
-
-- **Smart Recognition**: Analyzes screenshot content to distinguish between time-bound events/tasks and untimed to-dos.
-- **Auto‑create Calendar Events**: If start/end times and a location are detected, a calendar event is created with those fields filled, and other important info is placed in the notes.
-- **Auto‑create Memos**: For tasks without a clear deadline, a memo is created for later reference.
-- **Batch & Manual Control**: When multiple activities or tasks are found in one screenshot, a list of pending entries is shown; you can toggle each item to decide whether to generate it.
-- **Pre‑creation Review**: Before writing to Calendar or Memos, you can confirm and edit time, location, etc., to ensure accuracy.
-
-###  Advantages
-
-- **Extremely low cost**: This use case does not require top‑tier LLMs. Using affordable APIs like DeepSeek costs far less than Notion AI per call.
-- **Highly customisable**: Unlike off‑the‑shelf apps (e.g., Todo, Todoo), you can freely modify prompts, models, default calendar/folder, and even extend new output types inside the shortcuts.
-
-###  Limitations
-
-- **Limited presentation**: Calendar and memo views rely on the system’s built‑in apps and widgets, which are less feature‑rich than Notion or Todoo.
-- **Privacy concerns**: Screenshot content is sent to a third‑party API (DeepSeek). Although we do not store any data, we cannot completely rule out model training risks. **Avoid using sensitive screenshots; consider redacting them manually first.**
-
-###  Requirements & Dependencies
-
-- **Device**: iOS / iPadOS 16 or later
-- **API**: A valid DeepSeek API Key (get one at [platform.deepseek.com](https://platform.deepseek.com/))
-- **Tool**: Apple Shortcuts app (built‑in)
-
-###  How to Use
-
-1. **Download the shortcuts**  
-   - Option A: Use the [iCloud sharing link 1](https://www.icloud.com/shortcuts/340ec2efb71f48b6a1eec466e175be6f) [iCloud sharing link 2](https://www.icloud.com/shortcuts/3c47936568e7492496815a2c25049e95) [iCloud sharing link 3](https://www.icloud.com/shortcuts/cfdb9afac76f48628e5c138753abcff5) to download 3 short cuts.  
-   - Option B: Download the 3 `.shortcut` files from this repo to your phone, save them to the Files app, then tap each file to import into Shortcuts.
-
-2. **Configure API Key**  
-   - Open the main shortcut, find the text field labelled `API Key`, and paste your DeepSeek key.  
-   - The default model is `deepseek-v4-flash` (cost‑effective). To change the model or provider, modify the `model` and `url` variables accordingly.  
-   - Note: This shortcut **does not** rely on multimodal capabilities – text recognition is sufficient.
-
-3. **Set default calendar and memo folder (optional)**  
-   - By default, events are saved to the system’s “Personal” calendar, and memos to the main “Memos” folder.  
-   - To change, open the “Create Event” shortcut and follow the prompts to alter the calendar name; modify the memo folder name in the main shortcut.
-
-4. **Launch**  
-   - Assign the main shortcut to the side button.  
-   - Long‑press the side button to run it.
-
-###  Roadmap
-
-- **Better time parsing**: Currently does not understand relative expressions like “next Tuesday”. We plan to add current‑time retrieval and calculation (workaround: if the screenshot is from WeChat, tapping the message time reveals the full date, which the model can use).
-- **Multi‑turn interaction**: Although tool calls are supported, multi‑turn dialogues with the user are not. We will expose “choice” and “fill‑in‑the‑blank” as tools for the agent to enable interactive completion.
-- **More features**: Add “reminder”, “recurring event detection”, and “set reminders before event start”.
-- **Multiple language**: Currently system prompt is written in Chinese. An English version would be launched later. Or you can use any LLM to translate it yourself and substitute the current one.
-
----
-
-##  Contributing
-
-Issues and pull requests are welcome! If you have ideas for improvements or new features, please open an issue first to discuss.
 
